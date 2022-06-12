@@ -1,0 +1,80 @@
+﻿@model carrentalservice.Models.Car
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Car</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BrandName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BrandName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CarModel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CarModel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Specs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Specs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FuelType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FuelType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CostPerDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CostPerDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Desposit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Desposit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.drivercost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.drivercost)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Securitycost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Securitycost)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CarId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

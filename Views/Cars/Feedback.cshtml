@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Feedback";
+}
+
+<h2>Customer Feedback</h2>
+
+<p>Thank you for usimg Car Rental Service, we value all our customers to meet everyone's needs</p>
+
+<div class="row">
+    <div>
+        <p>Were you satisfied with the customer service provided to you?</p>
+        <input type="radio" id="SD" name="feed" value="Strongly Agree" /><label for="SD">Strongly Agree</label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" id="SD" name="feed" value="Agree" /><label for="A">Agree</label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" id="SD" name="feed" value="Disagree" /><label for="D">Disagree</label>
+    </div>
+
+    <div>
+        <p>Would you recommend our service to be used by anyone?</p>
+        <input type="radio" id="DD" name="rec" value="Strongly Agree" /><label for="SD">Strongly Agree</label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" id="DD" name="rec" value="Agree" /><label for="A">Agree</label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" id="DD" name="rec" value="Disagree" /><label for="D">Disagree</label>
+    </div>
+
+
+    <div>
+        <p>Do you experience any problems accessing our vehicles/services?</p>
+        <input type="radio" id="AA" name="New" value="Strongly Agree" /><label for="SD">Strongly Agree</label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" id="AA" name="New" value="Agree" /><label for="A">Agree</label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" id="AA" name="New" value="Disagree" /><label for="D">Disagree</label>
+    </div>
+
+</div>
+<div>
+    <p>Comments</p>
+    <input type="text" placeholder="Comments" />
+    <a href="@Url.Action("Index","Home")">
+        <span class="btn btn-success">Submit</span>
+    </a>
+</div>

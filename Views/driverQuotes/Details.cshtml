@@ -1,0 +1,42 @@
+﻿@model carrentalservice.Views.drivers.driverQuote
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>driverQuote</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.droploc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.droploc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pickuploc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pickuploc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DriverID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DriverID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DriveID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

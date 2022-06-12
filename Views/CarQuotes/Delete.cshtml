@@ -1,0 +1,88 @@
+﻿@model carrentalservice.Models.CarQuote
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>CarQuote</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PickUp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PickUp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DropOff)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DropOff)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PickTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PickTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DropTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DropTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BasicPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BasicPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumOfDays)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumOfDays)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CarId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CarId)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

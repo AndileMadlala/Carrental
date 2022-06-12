@@ -1,0 +1,30 @@
+﻿@model IEnumerable<carrentalservice.Views.drivers.driverQuote>
+
+@{
+    ViewBag.Title = "driveQuote";
+}
+
+<h3 style="color:white">GET QUOTE</h3>
+<div class="row text-center">
+
+
+
+    @foreach (var product2 in Model)
+    {
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <img src="@Url.Action("RenderImage2", "drivers", new { id2 = product2.DriverID })" width="250" height="250" />
+                <p><strong>Pick up on: @product2.pickuploc </strong></p>
+
+
+
+                <a href="@Url.Action("MakePayment","Index" ,new { id2 = product2.DriverID })">
+                    <span class="btn btn-success">Pay</span>
+                </a>
+            </div>
+        </div>
+
+    }
+</div>
+

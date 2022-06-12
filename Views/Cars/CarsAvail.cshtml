@@ -1,0 +1,84 @@
+﻿@model IEnumerable<carrentalservice.Models.Car>
+
+@{
+    ViewBag.Title = "CarsAvail";
+}
+<style>
+    .modal-header, h4, .close {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .modal-footer {
+        background-color: #f9f9f9;
+    }
+
+    /* Remove border and add padding to thumbnails */
+    .thumbnail {
+        padding: 0 0 15px 0;
+        border: none;
+        border-radius: 0;
+    }
+
+        .thumbnail p {
+            margin-top: 15px;
+            color: #555;
+        }
+
+    /* Black buttons with extra padding and without rounded borders */
+    .btn {
+        padding: 10px 20px;
+        background-color: #333;
+        color: #f1f1f1;
+        border-radius: 0;
+        transition: .2s;
+    }
+
+        /* On hover, the color of .btn will transition to white with black text */
+        .btn:hover, .btn:focus {
+            border: 1px solid #333;
+            background-color: #fff;
+            color: #000;
+        }
+</style>
+
+
+<h3 style="color:white">GET QUOTE</h3>
+    <div class="row text-center">
+
+
+
+        @foreach (var product in Model)
+        {
+
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="@Url.Action("RenderImage", "Cars", new { id = product.CarId })" width="250" height="250" />
+                    <p><strong>Manufacturer: @product.BrandName</strong></p>
+                    <br />
+                    <p><strong>Car Model: @product.CarModel</strong></p>
+                    <br />
+                    <p><strong>Car Specs: @product.Specs</strong></p>
+                    <br />
+                    <p><strong>Cost Per Day:R @product.CostPerDay</strong></p>
+                    <br />
+                    <p><strong>Deposit:R @product.Desposit</strong></p>
+                    <br />
+                    <p><strong>Driver cost is:R @product.drivercost</strong></p>
+                    <br />
+                    <p><strong>security escort cost is:R @product.Securitycost</strong></p>
+                    <br />
+                    <p><strong>Hire for trips around KZN (unlimited KM) received and bring back with full tank</strong></p>
+
+
+
+
+
+                    <a href="@Url.Action("Create","CarQuotes" ,new { id = product.CarId })">
+                        <span class="btn btn-success">Book Car</span>
+                    </a>
+                </div>
+            </div>
+            
+        }
+</div>

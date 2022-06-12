@@ -1,0 +1,79 @@
+﻿@model IEnumerable<carrentalservice.Models.CarQuote>
+
+@{
+                /**/
+
+                /**/
+
+                ViewBag.Title = "getQuotes";
+}
+
+<style>
+    .modal-header, h4, .close {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .modal-footer {
+        background-color: #f9f9f9;
+    }
+
+    /* Remove border and add padding to thumbnails */
+    .thumbnail {
+        padding: 0 0 15px 0;
+        border: none;
+        border-radius: 0;
+    }
+
+        .thumbnail p {
+            margin-top: 15px;
+            color: #555;
+        }
+
+    /* Black buttons with extra padding and without rounded borders */
+    .btn {
+        padding: 10px 20px;
+        background-color: #333;
+        color: #f1f1f1;
+        border-radius: 0;
+        transition: .2s;
+    }
+
+        /* On hover, the color of .btn will transition to white with black text */
+        .btn:hover, .btn:focus {
+            border: 1px solid #333;
+            background-color: #fff;
+            color: #000;
+        }
+</style>
+
+
+<h3 style="color:white">GET QUOTE</h3>
+<div class="row text-center">
+
+
+
+    @foreach (var product in Model)
+    {
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <img src="@Url.Action("RenderImage", "Cars", new { id = product.CarId })" width="250" height="250" />
+               
+                     <p><strong>Pick up on: @product.PickUp.ToShortDateString(); at @product.PickTime.TimeOfDay</strong></p>
+                    <p><strong>Drop off on: @product.DropOff.ToShortDateString(); at @product.DropTime.TimeOfDay </strong></p>
+                    <p><strong> Date car booked on  @product.Currentdate</strong></p>
+                    <p><strong>Booked for: @product.NumOfDays days</strong></p>
+                    <p><strong>Total Cost:R @product.TotalPrice</strong></p>
+                   
+
+                    <a href="@Url.Action("MakePayment","Payments" ,new { id = product.CarId })">
+                        <span class="btn btn-success">Pay</span>
+                    </a>
+                </div>
+        </div>
+        
+
+    }
+</div>
+

@@ -1,0 +1,82 @@
+﻿@model carrentalservice.Models.CarQuote
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CarQuote</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PickUp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PickUp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DropOff)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DropOff)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PickTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PickTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DropTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DropTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BasicPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BasicPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumOfDays)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumOfDays)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CarId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CarId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.QuoteId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
